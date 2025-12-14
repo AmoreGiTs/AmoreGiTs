@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
 
 <!-- Humorous Animated Header -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=AmoreGiTs%20%7C%20Compiling...&fontSize=60&fontAlignY=35&animation=fadeIn&fontColor=fff&desc=99%25%20Bug-Free*%20%7C%20*Terms%20and%20Conditions%20Apply&descAlignY=55&descSize=16" width="100%"/>
@@ -87,7 +87,7 @@ const developer = {
 
 <div align="center">
 
-![Snake animation](https://raw.githubusercontent.com/AmoreGiTs/AmoreGiTs/output/github-contribution-grid-snake-dark.svg)
+![snake animation](https://github.com/AmoreGiTs/AmoreGiTs/blob/output/github-contribution-grid-snake-dark.svg)
 
 </div>
 
@@ -103,4 +103,4 @@ const developer = {
 
 ![](https://komarev.com/ghpvc/?username=AmoreGiTs&color=3B82F6&style=flat-square&label=Profile+Views)
 
-</div>
+</div> -->
