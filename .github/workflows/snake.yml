@@ -46,7 +46,7 @@ jobs:
           mkdir -p .cache/snk
           
       - name: Generate Animated Snake SVG Files
-        uses: Platane/snk@v3.0.1
+        uses: Platane/snk@v3
         id: generate-snake
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -258,7 +258,7 @@ jobs:
                                 EOF
           
       - name: Optimize SVG Files
-        uses: josefnpat/svgo-action@v3
+        uses: ericcornelissen/svgo-action@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           svgo-version: 3
