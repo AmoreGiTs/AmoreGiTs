@@ -203,59 +203,59 @@ jobs:
                   <div class="card" style="margin-top: 2rem;">
                       <h3>📋 Embed Code</h3>
                       <pre style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px; text-align: left; overflow-x: auto;">
-  &lt;!-- Light Theme --&gt;
-  &lt;img src="https://raw.githubusercontent.com/${{ github.repository }}/output/snake.svg" alt="Snake animation" /&gt;
-  
-  &lt;!-- Dark Theme --&gt;
-  &lt;img src="https://raw.githubusercontent.com/${{ github.repository }}/output/snake-dark.svg" alt="Snake animation" /&gt;
-  
-  &lt;!-- Auto-detecting theme --&gt;
-  &lt;picture&gt;
-    &lt;source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/${{ github.repository }}/output/snake-dark.svg"&gt;
-    &lt;source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/${{ github.repository }}/output/snake.svg"&gt;
-    &lt;img src="https://raw.githubusercontent.com/${{ github.repository }}/output/snake.svg" alt="Snake animation" /&gt;
-  &lt;/picture&gt;</pre>
-                  </div>
-                  
-                  <footer>
-                      <p>Generated automatically • Updates daily • <a href="https://github.com/Platane/snk" style="color: #FFD700;">Powered by snk</a></p>
-                      <p>Last updated: <span id="timestamp">$(date -u)</span></p>
-                  </footer>
-              </div>
-              
-              <script>
-                  // Update timestamp
-                  document.getElementById('timestamp').textContent = new Date().toUTCString();
-                  
-                  function toggleTheme(theme) {
-                      const url = theme === 'dark' ? './snake-dark.svg' : './snake.svg';
-                      window.open(url, '_blank');
-                  }
-                  
-                  // Fetch GitHub stats (this would need a backend API)
-                  async function fetchStats() {
-                      try {
-                          const response = await fetch(`https://api.github.com/users/${{ github.repository_owner }}/events/public`);
-                          const events = await response.json();
-                          // Simple counting (simplified)
-                          const contributions = events.filter(e => 
-                              e.type === 'PushEvent' || 
-                              e.type === 'IssuesEvent' || 
-                              e.type === 'PullRequestEvent'
-                          ).length;
-                          
-                          document.getElementById('contributions').textContent = contributions.toLocaleString();
-                          document.getElementById('streak').textContent = '? days'; // Would need more complex API calls
-                      } catch (error) {
-                          console.error('Error fetching stats:', error);
-                      }
-                  }
-                  
-                  fetchStats();
-              </script>
-          </body>
-          </html>
-          EOF
+                        <!-- Light Theme -->
+                        &lt;img src="https://raw.githubusercontent.com/${{ github.repository }}/output/snake.svg" alt="Snake animation" /&gt;
+                        
+                        <!-- Dark Theme -->
+                        &lt;img src="https://raw.githubusercontent.com/${{ github.repository }}/output/snake-dark.svg" alt="Snake animation" /&gt;
+                        
+                        <!-- Auto-detecting theme -->
+                        &lt;picture&gt;
+                          &lt;source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/${{ github.repository }}/output/snake-dark.svg"&gt;
+                          &lt;source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/${{ github.repository }}/output/snake.svg"&gt;
+                          &lt;img src="https://raw.githubusercontent.com/${{ github.repository }}/output/snake.svg" alt="Snake animation" /&gt;
+                        &lt;/picture&gt;</pre>
+                                        </div>
+                                        
+                                        <footer>
+                                            <p>Generated automatically • Updates daily • <a href="https://github.com/Platane/snk" style="color: #FFD700;">Powered by snk</a></p>
+                                            <p>Last updated: <span id="timestamp">$(date -u)</span></p>
+                                        </footer>
+                                    </div>
+                                    
+                                    <script>
+                                        // Update timestamp
+                                        document.getElementById('timestamp').textContent = new Date().toUTCString();
+                                        
+                                        function toggleTheme(theme) {
+                                            const url = theme === 'dark' ? './snake-dark.svg' : './snake.svg';
+                                            window.open(url, '_blank');
+                                        }
+                                        
+                                        // Fetch GitHub stats (this would need a backend API)
+                                        async function fetchStats() {
+                                            try {
+                                                const response = await fetch(`https://api.github.com/users/${{ github.repository_owner }}/events/public`);
+                                                const events = await response.json();
+                                                // Simple counting (simplified)
+                                                const contributions = events.filter(e => 
+                                                    e.type === 'PushEvent' || 
+                                                    e.type === 'IssuesEvent' || 
+                                                    e.type === 'PullRequestEvent'
+                                                ).length;
+                                                
+                                                document.getElementById('contributions').textContent = contributions.toLocaleString();
+                                                document.getElementById('streak').textContent = '? days'; // Would need more complex API calls
+                                            } catch (error) {
+                                                console.error('Error fetching stats:', error);
+                                            }
+                                        }
+                                        
+                                        fetchStats();
+                                    </script>
+                                </body>
+                                </html>
+                                EOF
           
       - name: Optimize SVG Files
         uses: josefnpat/svgo-action@v3
