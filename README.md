@@ -87,7 +87,12 @@ const developer = {
 
 <div align="center">
 
-![Snake animation](https://raw.githubusercontent.com/AmoreGiTs/AmoreGiTs/output/snake-dark.svg)
+![Snake animation](https://raw.githubusercontent.com/AmoreGiTs/AmoreGiTs/output/snake.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmoreGiTs/AmoreGiTs/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AmoreGiTs/AmoreGiTs/output/snake.svg">
+  <img src="https://raw.githubusercontent.com/AmoreGiTs/AmoreGiTs/output/snake.svg" alt="Snake animation" />
+</picture>
 
 </div>
 
