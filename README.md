@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Humorous Animated Header -->
-<img src="assets/profile-animation.png" width="100%"/>
+<img src="assets/profile-animation.gif" width="100%" height="250" style="object-fit: cover;" />
 
 <!-- Typing Animation - Humorous -->
 <a href="https://git.io/typing-svg">
